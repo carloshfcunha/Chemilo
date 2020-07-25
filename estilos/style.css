@@ -62,8 +62,7 @@ main {
 }
 
 .passos {
-    width: 14%;
-    min-width: 200px;
+    width: 200px;
     background-color: rgb(177, 0, 0);
     background-image: linear-gradient(to bottom right, rgb(177, 0, 0) , rgb(5, 69, 126));
     text-align: center;
@@ -95,6 +94,10 @@ h2 {
 }
 
 .passos-texto p {
+    font-size: 80%;
+}
+
+.passos-texto p {
     padding: 10px;
 }
 
@@ -113,25 +116,30 @@ h2 {
 }
 
 @media(max-width: 700px){
+    h1 {
+        font-size: 120%;
+    }
+
     .grupo {
         width: 435px;
     }
     
     .passos {
-        width: 30%;
+        width: 200px%;
     }
 }
 
 @media(max-width: 456px){
     h1 {
-        font-size: 3.5vw;
+        margin-top: 3px;
+        font-size: 100%;
     }
 
     .grupo {
-        width: 200px;
+        width: 100%;
     }
     
     .passos {
-        width: 100%;
+        width: 46%;
     }
    }
