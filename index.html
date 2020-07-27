@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"></script>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="jquery/jquery.js"></script>
+    
 </head>
 <body>
     <header>
@@ -17,7 +20,7 @@
     <main>
         <section class="entradas">
             <div class="grupo">
-                <div class="passos">
+                <div id="passo1" class="passos">
                     <div class="passos-titulo">
                         <div class="duvida">
                             <i class="fa fa-question-circle" aria-hidden="true"></i>
@@ -29,9 +32,12 @@
                     <div class="passos-texto">
                         <i class="fa fa-flask" aria-hidden="true"></i>
                         <p>Elementos presentes na reação química catalisada.</p>
+                    </div>
+                    <div class="dados">
+                        <div class="fechar"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
                     </div>                    
                 </div>
-                <div class="passos">
+                <div id="passo2" class="passos">
                     <div class="passos-titulo">
                         <div class="duvida">
                             <i class="fa fa-question-circle" aria-hidden="true"></i>
@@ -43,9 +49,12 @@
                     <div class="passos-texto">
                         <i class="fa fa-toggle-on" aria-hidden="true"></i>
                         <p>Dados referentes ao leito catalítico e ao reator.</p>
-                    </div>                    
+                    </div>     
+                    <div class="dados">
+                        <div class="fechar"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
+                    </div>                 
                 </div>
-                <div class="passos">
+                <div id="passo3" class="passos">
                     <div class="passos-titulo">
                         <div class="duvida">
                             <i class="fa fa-question-circle" aria-hidden="true"></i>
@@ -57,12 +66,15 @@
                     <div class="passos-texto">
                         <i class="fa fa-tint" aria-hidden="true"></i>
                         <p>Informações para o cálculo das viscosidades.</p>
-                    </div>                    
+                    </div>    
+                    <div class="dados">
+                        <div class="fechar"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
+                    </div>                  
                 </div>
             </div>
 
             <div class="grupo">
-                <div class="passos">
+                <div id="passo4" class="passos">
                     <div class="passos-titulo">
                         <div class="duvida">
                             <i class="fa fa-question-circle" aria-hidden="true"></i>
@@ -74,9 +86,12 @@
                     <div class="passos-texto">
                         <i class="fa fa-cloud" aria-hidden="true"></i>
                         <p>Informações para o cálculo das difusividades.</p>
-                    </div>                    
+                    </div>       
+                    <div class="dados">
+                        <div class="fechar"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
+                    </div>               
                 </div>
-                <div class="passos">
+                <div id="passo5" class="passos">
                     <div class="passos-titulo">
                         <div class="duvida">
                             <i class="fa fa-question-circle" aria-hidden="true"></i>
@@ -88,9 +103,12 @@
                     <div class="passos-texto">
                         <i class="fa fa-fire" aria-hidden="true"></i>
                         <p>Informações para o cálculo do calor específico.</p>
-                    </div>                    
+                    </div>        
+                    <div class="dados">
+                        <div class="fechar"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
+                    </div>              
                 </div>
-                <div class="passos">
+                <div id="passo6" class="passos">
                     <div class="passos-titulo">
                         <div class="duvida">
                             <i class="fa fa-question-circle" aria-hidden="true"></i>
@@ -103,6 +121,9 @@
                         <i class="fa fa-thermometer-half" aria-hidden="true"></i>
                         <p>Informações para o cálculo da condutividade.</p>
                     </div>                    
+                    <div class="dados">
+                        <div class="fechar"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
+                    </div>  
                 </div>
             </div>
 
@@ -122,4 +143,5 @@
         <p>Todos os direitos não reservados, ou seja, pode usar sem medo de direito autoral.</p>
     </footer>
 </body>
+
 </html>
