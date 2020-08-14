@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="jquery/jquery.js"></script>
+    <script src="script/script.js"></script>
     
 </head>
 <body>
@@ -35,8 +36,20 @@
                     </div>
                     <div class="dados">
                         <h3>Insira a reação química balanceada.</h3>
-                        <input type="text" value="" placeholder="Ex: CO2 + 3H2 = CH3OH + H2O">
-                        <h3>Informe os dados cinéticos para quantos pontos desejar.</h3>
+                        <input type="text" id="reacao" onblur="conferirReacao()" value="" placeholder="Ex: CO2 + 3H2 = CH3OH + H2O">
+                        <h3>Informe os dados cinéticos.</h3>
+                        <div class="cinetico">
+                            <p>F<sub>A0</sub> [mol/h]</p>
+                            <input type="text" id="FA">
+                        </div>
+                        <div class="cinetico">
+                            <p>x<sub>A</sub></p>
+                            <input type="text" id="xA">
+                        </div>
+                        <div class="cinetico">
+                            <p>r<sub>A</sub> [mol/(h.g<sub>cat</sub>)]</p>
+                            <input type="text" id="rA">
+                        </div>
                         <div class="fechar"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
                     </div>                    
                 </div>
