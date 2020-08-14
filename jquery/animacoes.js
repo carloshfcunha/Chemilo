@@ -1,11 +1,14 @@
 $(document).ready(function(){
 
     $('.dados').fadeOut(0);
+    $('.quadros_duvidas').fadeOut(0);
+    $('.textos_duvidas').fadeOut(0);
     i = 1;
     j = 1;
+    k = 1;
 
     $('.passos').click( function(){
-        if (i+j==2) {
+        if (i+j+k==3) {
             $('.passos').not(this).fadeOut(300);
             $('.passos').not(this).css({width: "0px", height: "0px", padding: "0px", transition: ".45s"});
             $(this).css({width: "100%", height: "100%", margin: "0px", cursor: "auto", transition: ".5s"});
@@ -18,6 +21,42 @@ $(document).ready(function(){
         else if (j==1){
             i = 1
         }
+    });
+
+    $('#duvida1').click( function(){
+        $('.quadros_duvidas').fadeIn(300);
+        $('#texto_duvida1').fadeIn(300);
+        k = 0;
+    });
+    $('#duvida2').click( function(){
+        $('.quadros_duvidas').fadeIn(300);
+        $('#texto_duvida2').fadeIn(300);
+        k = 0;
+    });
+    $('#duvida3').click( function(){
+        $('.quadros_duvidas').fadeIn(300);
+        $('#texto_duvida3').fadeIn(300);
+        k = 0;
+    });
+    $('#duvida4').click( function(){
+        $('.quadros_duvidas').fadeIn(300);
+        $('#texto_duvida4').fadeIn(300);
+        k = 0;
+    });
+    $('#duvida5').click( function(){
+        $('.quadros_duvidas').fadeIn(300);
+        $('#texto_duvida5').fadeIn(300);
+        k = 0;
+    });
+    $('#duvida6').click( function(){
+        $('.quadros_duvidas').fadeIn(300);
+        $('#texto_duvida6').fadeIn(300);
+        k = 0;
+    });
+    $('.fim').click( function(){
+        $('.quadros_duvidas').fadeOut(300);
+        $('.textos_duvidas').fadeOut(300);
+        k = 1;
     });
 
     $('.fechar').click( function(){

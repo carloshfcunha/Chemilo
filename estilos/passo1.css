@@ -1,0 +1,19 @@
+#reacao {
+    width: 90%;
+    margin: 0 5% 20px 5%;
+}
+
+.cinetico{
+    color: rgb(3, 48, 87);
+    text-align: center;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.cinetico sub{
+    font-size: .6em;
+}
+
+.cinetico input{
+    margin-bottom: 20px;
+}
