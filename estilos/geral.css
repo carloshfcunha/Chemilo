@@ -167,17 +167,35 @@ h2 {
     cursor: pointer;
 }
 
+#calcular p {
+    width: 20%;
+    margin: 30px 40% 40px 40%;
+    background-color: rgba(3, 48, 87);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.336);
+}
+
+#calcular {
+    width: 100%;
+    left: 0;
+    float: left;
+}
+
 .saidas {
     width: 80%;
     height: 300px;
-    margin-top: 60px;
     margin-bottom: 60px;
     margin-left: 10%;
     border: solid 2px rgb(75, 0, 0);
     float: left;
     text-align: center;
     padding: 10px;
-    color: rgb(75, 0, 0);;
+    color: rgb(75, 0, 0);
 }
 
 @media(max-width: 700px){

@@ -12,6 +12,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="jquery/animacoes.js"></script>
     <script src="scripts/passo1.js"></script>
+    <script src="scripts/passo2.js"></script>
+    <script src="scripts/passo3.js"></script>
+    <script src="scripts/calculo.js"></script>
     
 </head>
 <body>
@@ -80,6 +83,35 @@
                         <p>Dados referentes ao leito catalítico e ao reator.</p>
                     </div>     
                     <div class="dados">
+                        <h3>Informe os dados referentes ao reator e ao catalisador.</h3>
+                        <div class="cinetico">
+                            <p>Diâmetro do reator [mm]</p>
+                            <input type="text" id="Dr">
+                        </div>
+                        <div class="cinetico">
+                            <p>Temperatura [ºC]</p>
+                            <input type="text" id="T">
+                        </div>
+                        <div class="cinetico">
+                            <p>Pressão [atm]</p>
+                            <input type="text" id="P">
+                        </div>
+                        <div class="cinetico">
+                            <p>Diâmetro da particula [mm]</p>
+                            <input type="text" id="dp">
+                        </div>
+                        <div class="cinetico">
+                            <p>Área superficial [m<sup>2</sup>/kg<sub>cat</sub>]</p>
+                            <input type="text" id="am">
+                        </div>
+                        <div class="cinetico">
+                            <p>Porosidade do leito [%]</p>
+                            <input type="text" id="e">
+                        </div>
+                        <div class="cinetico">
+                            <p>Densidade do leito [kg/m<sup>3</sup>]</p>
+                            <input type="text" id="ro">
+                        </div>
                         <div class="fechar"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
                     </div>                 
                 </div>
@@ -158,6 +190,8 @@
 
         </section>
         
+        <div id="calcular"><p onclick="calcular()">Calcular</p></div>
+
         <section class="saidas">
             <h2>Resultados</h2>
 

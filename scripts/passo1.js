@@ -12,6 +12,9 @@ function conferirReacao() {
     nMaises = 0;
     err = 0;
     for (var i in compostos){
+        if(isNaN(compostos[i])){}else{
+            err = 1;
+        }
         if(compostos[i] == "="){
             nIguais++;
             if(i != comprimento - 1){
@@ -45,32 +48,36 @@ function conferirReacao() {
 
         coeficientes = [];
         moleculas = [];
+        t = 1;
         for (var i in compostos){
+            if (compostos[i] == "="){
+                t = -1;
+            }
             if (compostos[i] != "+" && compostos[i] != "="){
                 separacao = compostos[i].split("");
                 k = 0;
                 l = 0;
                 nome = ""
-                mol = ""
+                coef = ""
                 for (var j in separacao){
                     if (isNaN(separacao[j])){
                         nome = nome.concat(separacao[j]);
                         k = 1;
                         if (l == 0){
-                            mol = mol.concat(1);
+                            coef = coef.concat(1);
                         }
                         l = 1
                     }else{
                         if (k == 1){
                             nome = nome.concat(separacao[j]);
                         }else{
-                            mol = mol.concat(separacao[j]);
+                            coef = coef.concat(separacao[j]);
                             l = 1;
                         }
                     }
                 }
                 moleculas.push(nome);
-                coeficientes.push(mol);
+                coeficientes.push(t*coef);
             }
         }
 
@@ -78,5 +85,10 @@ function conferirReacao() {
         alert("Equação da reação incorreta!")
     }
     
+    localStorage.setItem("coeficientes", coeficientes);
+    localStorage.setItem("moleculas", moleculas);
+
+    viscosidades();
+
 }
 
