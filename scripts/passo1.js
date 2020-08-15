@@ -85,10 +85,12 @@ function conferirReacao() {
         alert("Equação da reação incorreta!")
     }
     
-    localStorage.setItem("coeficientes", coeficientes);
-    localStorage.setItem("moleculas", moleculas);
+    localStorage.setItem("coeficientes", JSON.stringify(coeficientes));
+    localStorage.setItem("moleculas", JSON.stringify(moleculas));
 
     viscosidades();
+    difusoes();
+    calores();
 
 }
 

@@ -1,0 +1,13 @@
+#dados_difusoes {
+    text-align: center;
+    font-weight: 700;
+    color: rgb(3, 48, 87);
+}
+
+#dados_difusoes p {
+    font-size: 1em;
+}
+
+#dados_difusoes input {
+    margin-bottom: 20px;
+}

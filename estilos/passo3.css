@@ -1,0 +1,26 @@
+#dados_viscosidades, #dados_calores {
+    text-align: center;
+    font-weight: 700;
+    
+    color: rgb(3, 48, 87);
+}
+
+#dados_viscosidades div, #dados_calores div {
+    border: solid 2px rgba(3, 48, 87, 0.3);
+    border-radius: 5px;
+    margin-bottom: 12px;
+    padding-bottom: 20px;
+}
+
+#dados_viscosidades h3, #dados_calores h3 {
+    font-size: 1.2em;
+}
+
+#dados_viscosidades p, #dados_calores p {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+#fechar_visc, #fechar_calor {
+    margin-top: 30px;
+}

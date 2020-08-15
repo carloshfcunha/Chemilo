@@ -7,6 +7,8 @@
     <link rel = "shortcut icon" type = "imagem/x-icon" href = "imagens/icone">
     <link rel="stylesheet" href="estilos/geral.css">
     <link rel="stylesheet" href="estilos/passo1.css">
+    <link rel="stylesheet" href="estilos/passo3.css">
+    <link rel="stylesheet" href="estilos/passo4.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"></script>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -14,6 +16,8 @@
     <script src="scripts/passo1.js"></script>
     <script src="scripts/passo2.js"></script>
     <script src="scripts/passo3.js"></script>
+    <script src="scripts/passo4.js"></script>
+    <script src="scripts/passo5.js"></script>
     <script src="scripts/calculo.js"></script>
     
 </head>
@@ -129,7 +133,10 @@
                         <p>Informações para o cálculo das viscosidades.</p>
                     </div>    
                     <div class="dados">
-                        <div class="fechar"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
+                        <div id="dados_viscosidades">
+                            <p>Informe a equação da reação primeiro!</p>
+                        </div>
+                        <div id="fechar_visc" class="fechar"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
                     </div>                  
                 </div>
             </div>
@@ -149,6 +156,9 @@
                         <p>Informações para o cálculo das difusividades.</p>
                     </div>       
                     <div class="dados">
+                        <div id="dados_difusoes">
+                            <p>Informe a equação da reação primeiro!</p>
+                        </div>
                         <div class="fechar"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
                     </div>               
                 </div>
@@ -166,7 +176,10 @@
                         <p>Informações para o cálculo do calor específico.</p>
                     </div>        
                     <div class="dados">
-                        <div class="fechar"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
+                        <div id="dados_calores">
+                            <p>Informe a equação da reação primeiro!</p>
+                        </div>
+                        <div id="fechar_calor" class="fechar"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
                     </div>              
                 </div>
                 <div id="passo6" class="passos">
