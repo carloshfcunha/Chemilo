@@ -16,7 +16,7 @@ function calores() {
         }
         calor = calor.concat('<div><h3>Dados para o ');
         calor = calor.concat(m);
-        calor = calor.concat('</h3><p>a<sub>0</sub></p><input class="a0_calor"></input><p>a<sub>1</sub></p><input class="a0_calor"></input><p>a<sub>2</sub></p><input class="a0_calor"></input><p>a<sub>3</sub></p><input class="a0_calor"></input><p>a<sub>4</sub></p><input class="a0_calor"></input></div>');
+        calor = calor.concat('</h3><p>A<sub>0</sub></p><input class="a0_calor"></input><p>A<sub>1</sub></p><input class="a1_calor"></input><p>A<sub>2</sub></p><input class="a2_calor"></input><p>A<sub>3</sub></p><input class="a3_calor"></input><p>A<sub>4</sub></p><input class="a4_calor"></input></div>');
     }
     
 

@@ -1,5 +1,6 @@
 function difusoes() {
     molec = JSON.parse(localStorage.getItem("moleculas") || '[]');
+    coef = JSON.parse(localStorage.getItem("coeficientes") || '[]');
 
     atomos = [];
     dif = "<h3>Informe os volumes de difusão atomica (&nu; [cm<sup>3</sup>/mol]) para os seguintes átomos:</h3>";
