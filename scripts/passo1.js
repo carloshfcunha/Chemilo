@@ -91,6 +91,7 @@ function conferirReacao() {
     viscosidades();
     difusoes();
     calores();
+    massaMolar();
 
 }
 

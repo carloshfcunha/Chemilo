@@ -79,9 +79,11 @@ function difusoes() {
         }
     }
 
+    console.log(balanco);
+
     ba = 0;
     for(i in balanco){
-        ba = ba + balanco[i]^2;
+        ba = ba + Math.abs(balanco[i]);
     }
 
     if(ba != 0){
