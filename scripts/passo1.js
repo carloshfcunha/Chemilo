@@ -3,7 +3,7 @@
 function conferirReacao() {
 
     idReacao = document.getElementById('reacao');
-    reacao = idReacao.value.toUpperCase();    
+    reacao = idReacao.value;    
     compostos = reacao.split(" ");
 
     comprimento = compostos.length;
