@@ -88,6 +88,7 @@ function conferirReacao() {
     localStorage.setItem("coeficientes", JSON.stringify(coeficientes));
     localStorage.setItem("moleculas", JSON.stringify(moleculas));
 
+    constLJ();
     viscosidades();
     difusoes();
     calores();

@@ -95,4 +95,6 @@ function difusoes() {
 
     document.getElementById("dados_difusoes").innerHTML = dif;
 
+    
+
 }
