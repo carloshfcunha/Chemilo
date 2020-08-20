@@ -23,9 +23,10 @@
     <script src="scripts/massa.js"></script>
     <script src="scripts/LennardJones.js"></script>
     <script src="scripts/calcs.js"></script>
+    <script src="scripts/inicia.js"></script>
     
 </head>
-<body>
+<body onload="inicializa()">
     <header>
         <img src="imagens/logo.png" alt="Logo_1">
         <h1>Cálculos de Fenômenos de Transporte em Catálise Heterogênea</h1>
@@ -62,10 +63,7 @@
                         <h3>Insira a reação química balanceada.</h3>
                         <input type="text" id="reacao" onblur="conferirReacao()" value="" placeholder="Ex: CO2 + 3H2 = CH3OH + H2O">
                         <h3>Informe os dados cinéticos.</h3>
-                        <div class="cinetico">
-                            <p>F<sub>A0</sub> [mol/h]</p>
-                            <input type="text" id="FA">
-                        </div>
+                        <div class="cinetico" id="fluxos"></div>
                         <div class="cinetico">
                             <p>x<sub>A</sub></p>
                             <input type="text" id="xA">

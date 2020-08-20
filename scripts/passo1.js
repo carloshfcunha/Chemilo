@@ -81,6 +81,21 @@ function conferirReacao() {
             }
         }
 
+        fl = "";
+        for(i in moleculas){
+            fl = fl.concat('<p>F<sub>');
+            fl = fl.concat(moleculas[i]);
+            fl = fl.concat('_0</sub> [mol/h]</p><input type="text" class="F">');
+        }
+        document.getElementById("fluxos").innerHTML = fl;
+
+        
+            document.getElementsByClassName("F")[0].value = 10;
+            document.getElementsByClassName("F")[1].value = 0;
+            document.getElementsByClassName("F")[2].value = 0;
+
+
+
     }else{
         alert("Equação da reação incorreta!")
     }

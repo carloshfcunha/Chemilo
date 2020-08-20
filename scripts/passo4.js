@@ -192,7 +192,8 @@ function difusoes() {
         }
     }
 
-    localStorage.setItem("volumeMol", JSON.stringify(volmol));
+    localStorage.setItem("MOrA", JSON.stringify(MOrA));
+    localStorage.setItem("seA", JSON.stringify(seA));
 
     x4 = document.getElementById("passo4").getElementsByTagName("input");
     cx4 = x4.length;

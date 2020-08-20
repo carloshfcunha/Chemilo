@@ -61,7 +61,6 @@ function calculos(){
 
     localStorage.setItem("viscVal", JSON.stringify(viscVal));
     localStorage.setItem("cpVal", JSON.stringify(cpVal));
-    localStorage.setItem("condVal", JSON.stringify(condVal));
 
     x6 = document.getElementById("passo6").getElementsByTagName("input");
     cx6 = x6.length;
