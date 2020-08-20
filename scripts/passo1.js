@@ -93,6 +93,7 @@ function conferirReacao() {
     difusoes();
     calores();
     massaMolar();
+    conduc();
 
 }
 

@@ -194,4 +194,21 @@ function difusoes() {
 
     localStorage.setItem("volumeMol", JSON.stringify(volmol));
 
+    x = document.getElementById("passo4").getElementsByTagName("input");
+    cx = x.length;
+
+    t4 = 1;
+
+    for(i = 0; i < x; i++){
+        if(x[i] == ""){
+            t4 = 0;
+        }
+    }
+
+    if(t3 == 1){
+        $("#passo4").css({"background-image": "linear-gradient(to bottom right, rgb(0, 24, 46) , rgb(14, 101, 177))"});
+    }
+
+    localStorage.setItem("t4", JSON.stringify(t4));
+
 }

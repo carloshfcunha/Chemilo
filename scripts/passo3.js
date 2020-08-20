@@ -22,7 +22,7 @@ function viscosidades() {
             visc = visc.concat('</h3><p>&sigma; [&#8491;]</p><input class="sig_visc"></input><p>&epsilon;/k [K]</p><input class="eps_visc"></input><p>Massa molar [g/mol]</p><input class="mm_visc"></input></div>');
 
         }else{
-            visc = visc.concat('</h3><p>P<sub>c</sub> [atm]</p><input class="pc_visc"></input><p>T<sub>c</sub> [K]</p><input class="tc_visc"></input></h3><p>Z<sub>c</sub></p><input class="pc_visc"></input><p>Massa molar [g/mol]</p><input class="mm_visc"></input></div>');
+            visc = visc.concat('</h3><p>P<sub>c</sub> [atm]</p><input class="pc_visc"></input><p>T<sub>c</sub> [K]</p><input class="tc_visc"></input></h3><p>Z<sub>c</sub></p><input class="zc_visc"></input><p>Massa molar [g/mol]</p><input class="mm_visc"></input></div>');
         }
     }
 
@@ -36,7 +36,22 @@ function viscosidades() {
             w++;
         }
     }
-    
-    
+
+    x = document.getElementById("passo3").getElementsByTagName("input");
+    cx = x.length;
+
+    t3 = 1;
+
+    for(i = 0; i < x; i++){
+        if(x[i] == ""){
+            t3 = 0;
+        }
+    }
+
+    if(t3 == 1){
+        $("#passo3").css({"background-image": "linear-gradient(to bottom right, rgb(0, 24, 46) , rgb(14, 101, 177))"});
+    }
+
+    localStorage.setItem("t3", JSON.stringify(t3));
     
 }
