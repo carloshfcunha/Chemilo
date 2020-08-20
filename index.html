@@ -22,7 +22,7 @@
     <script src="scripts/calculo.js"></script>
     <script src="scripts/massa.js"></script>
     <script src="scripts/LennardJones.js"></script>
-    <script src="scripts/condCalc.js"></script>
+    <script src="scripts/calcs.js"></script>
     
 </head>
 <body>
@@ -74,7 +74,7 @@
                             <p>r<sub>A</sub> [mol/(h.g<sub>cat</sub>)]</p>
                             <input type="text" id="rA">
                         </div>
-                        <div class="fechar"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
+                        <div class="fechar" onclick="calculos()"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
                     </div>                    
                 </div>
                 <div id="passo2" class="passos">
@@ -120,7 +120,7 @@
                             <p>Densidade do leito [kg/m<sup>3</sup>]</p>
                             <input type="text" id="ro">
                         </div>
-                        <div class="fechar"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
+                        <div class="fechar" onclick="calculos()"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
                     </div>                 
                 </div>
                 <div id="passo3" class="passos">
@@ -140,7 +140,7 @@
                         <div id="dados_viscosidades">
                             <p>Informe a equação da reação primeiro!</p>
                         </div>
-                        <div id="fechar_visc" class="fechar"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
+                        <div id="fechar_visc" class="fechar" onclick="calculos()"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
                     </div>                  
                 </div>
             </div>
@@ -183,7 +183,7 @@
                         <div id="dados_calores">
                             <p>Informe a equação da reação primeiro!</p>
                         </div>
-                        <div id="fechar_calor" class="fechar"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
+                        <div id="fechar_calor" class="fechar" onclick="calculos()"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
                     </div>              
                 </div>
                 <div id="passo6" class="passos">

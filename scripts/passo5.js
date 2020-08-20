@@ -21,4 +21,44 @@ function calores() {
     
 
     document.getElementById("dados_calores").innerHTML = calor;
+
+    cpt = [["H2",2.883,3.68E-03,-7.72E-06,6.92E-09,-2.13E-12],
+    ["H2O",4.395,-4.19E-03,1.41E-05,-1.56E-08,6.32E-12],
+    ["O2",3.63,-1.79E-03,6.58E-06,-6.01E-09,1.79E-12],
+    ["C2H5OH",4.396,6.28E-04,5.73E-05,-7.02E-08,2.69E-11],
+    ["CH3CHO",0.928021561,2.19E-02,-1.21E-05,2.86E-09,0],
+    ["CO2",3.259,1.36E-03,1.50E-05,-2.37E-08,1.06E-11],
+    ["CH3OH",4.714,-6.99E-03,4.21E-05,-4.44E-08,1.54E-11]];
+
+    for(i in molec){
+        for(j in cpt){
+            if(molec[i] == cpt[j][0]){
+                document.getElementsByClassName("a0_calor")[i].value = cpt[j][1];
+                document.getElementsByClassName("a1_calor")[i].value = cpt[j][2];
+                document.getElementsByClassName("a2_calor")[i].value = cpt[j][3];
+                document.getElementsByClassName("a3_calor")[i].value = cpt[j][4];
+                document.getElementsByClassName("a4_calor")[i].value = cpt[j][5];
+            }
+        }
+    }
+
+    x5 = document.getElementById("passo5").getElementsByTagName("input");
+    cx5 = x5.length;
+
+    t5 = 1;
+
+    for(i = 0; i < cx5; i++){
+        if(isNaN(x5[i].value) || x5[i].value == ""){
+            t5 = 0;
+        }
+    }
+
+    if(t5 == 1){
+        $("#passo5").css({"background-image": "linear-gradient(to bottom right, rgb(0, 24, 46) , rgb(14, 101, 177))"});
+    }else{
+        $("#passo5").css({"background-image": "linear-gradient(to bottom right, rgb(177, 0, 0) , rgb(5, 69, 126))"});
+    }
+
+    localStorage.setItem("t5", JSON.stringify(t5));
+
 }

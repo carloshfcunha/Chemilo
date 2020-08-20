@@ -135,7 +135,4 @@ function massaMolar() {
 
     localStorage.setItem("mMolar", JSON.stringify(mm));
 
-    for(i in mm){
-        document.getElementsByClassName("mm_visc")[i].value = mm[i];
-    }
 }

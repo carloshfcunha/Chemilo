@@ -21,5 +21,4 @@ function conduc(){
     }
 
     document.getElementById("dados_conducoes").innerHTML = conducao;
-
     }

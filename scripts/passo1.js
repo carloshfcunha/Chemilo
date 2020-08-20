@@ -89,10 +89,10 @@ function conferirReacao() {
     localStorage.setItem("moleculas", JSON.stringify(moleculas));
 
     constLJ();
+    massaMolar();
     viscosidades();
     difusoes();
     calores();
-    massaMolar();
     conduc();
 
 }
