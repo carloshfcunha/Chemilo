@@ -63,7 +63,6 @@
                         <h3>Insira a reação química balanceada.</h3>
                         <input type="text" id="reacao" onblur="conferirReacao()" value="" placeholder="Ex: CO2 + 3H2 = CH3OH + H2O">
                         <h3>Informe os dados cinéticos.</h3>
-                        <div class="cinetico" id="fluxos"></div>
                         <div class="cinetico">
                             <p>x<sub>A</sub></p>
                             <input type="text" id="xA">
@@ -72,6 +71,11 @@
                             <p>r<sub>A</sub> [mol/(h.g<sub>cat</sub>)]</p>
                             <input type="text" id="rA">
                         </div>
+                        <div class="cinetico">
+                            <p>(-&Delta;H<sub>reação</sub>) [J/mol]</p>
+                            <input type="text" id="dH">
+                        </div>
+                        <div class="cinetico" id="fluxos"></div>
                         <div class="fechar" onclick="calculos()"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
                     </div>                    
                 </div>
@@ -103,20 +107,20 @@
                             <input type="text" id="P">
                         </div>
                         <div class="cinetico">
-                            <p>Diâmetro da particula [mm]</p>
+                            <p>Diâmetro da partícula [mm]</p>
                             <input type="text" id="dp">
                         </div>
                         <div class="cinetico">
-                            <p>Área superficial [m<sup>2</sup>/kg<sub>cat</sub>]</p>
+                            <p>Fator de forma da partícula</p>
+                            <input type="text" id="ff">
+                        </div>
+                        <div class="cinetico">
+                            <p>Área específica superficial da partícula [m<sup>2</sup>/kg<sub>cat</sub>]</p>
                             <input type="text" id="am">
                         </div>
                         <div class="cinetico">
-                            <p>Porosidade do leito [%]</p>
+                            <p>Porosidade do leito catalítico [%]</p>
                             <input type="text" id="e">
-                        </div>
-                        <div class="cinetico">
-                            <p>Densidade do leito [kg/m<sup>3</sup>]</p>
-                            <input type="text" id="ro">
                         </div>
                         <div class="fechar" onclick="calculos()"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
                     </div>                 
@@ -213,8 +217,29 @@
         <section class="saidas">
             <h2>Resultados</h2>
 
-            <div>
-                
+            <div class="resultados">
+                <p>Viscosidade Média = </p>
+                <div>
+
+                </div>
+            </div>
+            <div class="resultados">
+                <p>Difusividade Média = </p>
+                <div>
+
+                </div>
+            </div>
+            <div class="resultados">
+                <p>Cp Médio = </p>
+                <div>
+
+                </div>
+            </div>
+            <div class="resultados">
+                <p>Condutividade Média = </p>
+                <div>
+
+                </div>
             </div>
             
         </section>

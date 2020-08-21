@@ -11,11 +11,6 @@ function calcular() {
     moa = JSON.parse(localStorage.getItem("moa") || '[]');
     MOrA = JSON.parse(localStorage.getItem("MOrA") || '[]');
     seA = JSON.parse(localStorage.getItem("seA") || '[]');
-
-    condVal = Array(molec);
-    for(i in molec){
-        condVal[i] = document.getElementsByClassName("lamb_conducao")[i].value;
-    }
     
     F = Array(molec);
     Fa0 = document.getElementsByClassName("F")[0].value;
@@ -92,7 +87,14 @@ function calcular() {
 
     diam = document.getElementById("Dr").value/1000;
 
-    G = Fa0*mm[nA]/((3.1415*diam**2)*3600000/4);
+    somaFM = 0;
+    for(i in molec){
+        if(coef[i] > 0){
+            somaFM = somaFM + F[i]*mm[i]
+        }
+    }
+
+    G = somaFM/((3.1415*diam**2)*3600000/4);
 
     dp = document.getElementById("dp").value/1000;
 
@@ -122,23 +124,47 @@ function calcular() {
         erro = Math.abs(Pfa1-Pfa)/Pfa;
         Pfa = Pfa1;
     }
-    
+
     cpm = 0;
-    condm = 0;
     for(i in molec){
         cpm = cpm + yi[i]*cpVal[i];
-        condm = condm + yi[i]*condVal[i];
-        console.log(cpVal[i]);
     }
-    console.log(cpm);
+
+    condVal = Array(molec);
+    for(i in molec){
+        condVal[i] = document.getElementsByClassName("lamb_conducao")[i].value;
+    }
+
+    condm = 0;
+    for(i in molec){
+        soma = 0;
+        for(j in molec){
+            Aij = ((1+((condVal[i]/condVal[j])**0.5)*((mm[i]/mm[j])**(1/4)))**2)/((8*(1+mm[i]/mm[j]))**0.5);
+            soma = soma + yi[j]*Aij;
+        } 
+        condm = condm + yi[i]*condVal[i]/soma;
+    }
 
     Pr = cpm*viscm/(mmM*condm);
-    console.log(Pr);
+    
+    ff = document.getElementById("ff").value;
 
+    VdivA = ff*dp/6;
 
+    poro = document.getElementById("e").value/100;
 
+    Rel = G*poro*VdivA/(viscm*ff);
 
+    if(Rel>50){
+        jh = 0.61*ff*Rel**(-0.41);
+    }else{
+        jh = 0.91*ff*Rel**(-0.51);
+    }
+    
+    dH = document.getElementById("dH").value;
 
+    dT = (rA*mmM*dH*(Pr)**(2/3))/(3600*am*jh*cpm*G);
+    
 
-
+    $('.saidas').slideDown(300);
 }

@@ -3,6 +3,7 @@ $(document).ready(function(){
     $('.dados').fadeOut(0);
     $('.quadros_duvidas').fadeOut(0);
     $('.textos_duvidas').fadeOut(0);
+    $('.saidas').fadeOut(0);
     ii = 1;
     jj = 1;
     kk = 1;
