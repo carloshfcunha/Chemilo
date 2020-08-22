@@ -125,6 +125,8 @@ function calcular() {
         Pfa = Pfa1;
     }
 
+    km = 1000*rA/(3600*am*dP);
+
     cpm = 0;
     for(i in molec){
         cpm = cpm + yi[i]*cpVal[i];
@@ -193,8 +195,37 @@ function calcular() {
 
 
     dT = (rA*mmM*dH*(Pr)**(2/3))/(3600*am*jh*cpm*G);
+
+    hf = 1000*dH*rA/(3600*am*dT)
     
-    console.log(dT);
+    tmTexto = "<p>k<sub>m</sub> = ";
+    tmTexto = tmTexto.concat(km.toPrecision(5));
+    tmTexto = tmTexto.concat(" mol/(m<sup>2</sup>.s.atm)</p><p>&Delta;P = ");
+    tmTexto = tmTexto.concat(dP.toPrecision(5));
+    tmTexto = tmTexto.concat(" atm</p>");
+    document.getElementById("tm").innerHTML = tmTexto
+
+    tcTexto = "<p>h<sub>f</sub> = ";
+    tcTexto = tcTexto.concat(hf.toPrecision(5));
+    tcTexto = tcTexto.concat(" J/(m<sup>2</sup>.s.K)</p><p>&Delta;T = ");
+    tcTexto = tcTexto.concat(dT.toPrecision(5));
+    tcTexto = tcTexto.concat(" ºC</p>");
+    document.getElementById("tc").innerHTML = tcTexto
+
+    viscTexto = "<p>&mu;<sub>m</sub> = ";
+    viscTexto = viscTexto.concat(viscm.toPrecision(5));
+    viscTexto = viscTexto.concat(" cp</p>");
+    for(i in molec){
+        viscTexto = viscTexto.concat("<p>&mu;<sub>");
+        viscTexto = viscTexto.concat(molec[i]);
+        viscTexto = viscTexto.concat("</sub> = ");
+        viscTexto = viscTexto.concat(viscVal[i].toPrecision(5));
+        viscTexto = viscTexto.concat(" cp</p>");
+        alert(viscVal[i]);
+    }
+    document.getElementById("visc_resultado").innerHTML = viscTexto
+
+
 
     $('.saidas').slideDown(300);
 }

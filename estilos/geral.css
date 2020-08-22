@@ -207,12 +207,39 @@ h2 {
     color: white;
 }
 
+#div_mostrar {
+    width: 100%;
+    float: left;
+}
+
+#mostrar {
+    padding: 5px;
+    width: 30%;
+    margin: 30px 0 10px 35%;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 700;
+    background-image: linear-gradient(to right, rgb(0, 24, 46) , rgb(5, 69, 126));
+    color: white;
+    cursor: pointer;
+    float: left;
+}
+
+#principal .resultados {
+    width: 41%;
+    margin-left: 6%;
+}
+
 .resultados {
     height: 100%;
     width: 30%;
     margin: 20px 0 0 2.5%;
     padding: 5px;
     border-radius: 5px;
+}
+
+.resultados p {
+    padding: 10px;
 }
 
 .resultados div{
@@ -241,12 +268,17 @@ h2 {
         margin-left: 2.5%;
     }
 
-    .saidas h2 {
+    .saidas h2, #mostrar {
         width: 50%;
         margin-left: 25%;
     }
 
     .resultados {
+        width: 90%;
+        margin: 20px 0 0 5%;
+    }
+
+    #principal .resultados {
         width: 90%;
         margin: 20px 0 0 5%;
     }

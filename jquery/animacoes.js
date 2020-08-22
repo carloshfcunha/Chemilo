@@ -4,9 +4,11 @@ $(document).ready(function(){
     $('.quadros_duvidas').fadeOut(0);
     $('.textos_duvidas').fadeOut(0);
     $('.saidas').fadeOut(0);
+    $('#secundario').fadeOut(0);
     ii = 1;
     jj = 1;
     kk = 1;
+    ww = 0;
 
     $('.passos').click( function(){
         if (ii + jj + kk == 3) {
@@ -74,6 +76,21 @@ $(document).ready(function(){
         $('.passos-texto p').fadeIn(300);
 
         jj = 1;
+    });
+
+    $('#mostrar').click( function(){
+        if(ww == 0){
+            $('#secundario').slideDown(300);
+            ww = 1;
+            document.getElementById("mostrar").innerHTML = "Ocultar Informações";
+        }else{
+            $('#secundario').slideUp(300);
+            document.getElementById("mostrar").innerHTML = "Mostrar Informações";
+            ww = 0;
+        }
+        
+        
+
     });
 
   });
