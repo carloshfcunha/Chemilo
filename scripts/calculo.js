@@ -161,10 +161,40 @@ function calcular() {
         jh = 0.91*ff*Rel**(-0.51);
     }
     
-    dH = document.getElementById("dH").value;
+    dA0 = 0;
+    dA1 = 0;
+    dA2 = 0;
+    dA3 = 0;
+    dA4 = 0;
+    dH0 = 0;
+    A0Val = Array(molec);
+    A1Val = Array(molec);
+    A2Val = Array(molec);
+    A3Val = Array(molec);
+    A4Val = Array(molec);
+    dhVal = Array(molec);
+    for(i in molec){
+        A0Val[i] = document.getElementsByClassName("a0_calor")[i].value;
+        A1Val[i] = document.getElementsByClassName("a1_calor")[i].value;
+        A2Val[i] = document.getElementsByClassName("a2_calor")[i].value;
+        A3Val[i] = document.getElementsByClassName("a3_calor")[i].value;
+        A4Val[i] = document.getElementsByClassName("a4_calor")[i].value;
+        dhVal[i] = document.getElementsByClassName("dh_calor")[i].value*1000;
+        dA0 = dA0 -coef[i]*A0Val[i];
+        dA1 = dA1 -coef[i]*A1Val[i];
+        dA2 = dA2 -coef[i]*A2Val[i];
+        dA3 = dA3 -coef[i]*A3Val[i];
+        dA4 = dA4 -coef[i]*A4Val[i];
+        dH0 = dH0 -coef[i]*dhVal[i];
+    }
+    
+    T0 = 298;
+    dH = dH0 + 8.314*((dA0*T + (dA1/2)*T**2 + (dA2/3)*T**3 + (dA3/4)*T**4 + (dA4/5)*T**5)-(dA0*T0 + (dA1/2)*T0**2 + (dA2/3)*T0**3 + (dA3/4)*T0**4 + (dA4/5)*T0**5))
+
 
     dT = (rA*mmM*dH*(Pr)**(2/3))/(3600*am*jh*cpm*G);
     
+    console.log(dT);
 
     $('.saidas').slideDown(300);
 }
