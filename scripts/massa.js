@@ -127,7 +127,7 @@ function massaMolar() {
         for(j in atomos){
             for(k in massas){
                 if(atomos[j] == massas[k][0]){
-                    mm[i] = parseFloat(parseFloat(mm[i]) + parseFloat(nAtomos[i][j])*parseFloat(massas[k][1]));
+                    mm[i] = mm[i] + nAtomos[i][j]*massas[k][1];
                 }
             }
         }

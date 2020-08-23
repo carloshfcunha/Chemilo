@@ -18,7 +18,7 @@ function calcular() {
     dn = 0;
     Ft = 0;
     for(i in molec){
-        F[i] = Number(parseFloat(document.getElementsByClassName("F")[i].value));
+        F[i] = Number(document.getElementsByClassName("F")[i].value);
         if(F[i]/coef[i] < Fa0 && F[i] > 0){
             Fa0 = F[i];
             nA = i;
@@ -30,7 +30,7 @@ function calcular() {
     ya0 = Fa0/Ft;
     ea = ya0*dn/coef[nA];
 
-    xA = Number(parseFloat(document.getElementById("xA").value));
+    xA = Number(document.getElementById("xA").value);
 
     yi = Array(molec);
     viscm = 0;
@@ -61,7 +61,7 @@ function calcular() {
         }     
     }
 
-    T = Number(document.getElementById("T").value);
+    T = Number(document.getElementById("T").value)+273;
 
     Dai = Array(molec);
     somaSup = 0;

@@ -1,6 +1,6 @@
 function inicializa() {
     document.getElementById("reacao").value = "C2H5OH = CH3CHO + H2";
-    document.getElementById("T").value = 548;
+    document.getElementById("T").value = 275;
     document.getElementById("P").value = 1;
     document.getElementById("Dr").value = 35;
     document.getElementById("dp").value = 2.289;

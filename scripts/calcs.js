@@ -3,7 +3,7 @@ function calculos(){
     molec = JSON.parse(localStorage.getItem("moleculas") || '[]');
     mm = JSON.parse(localStorage.getItem("mMolar") || '[]');
 
-    T = parseFloat(document.getElementById('T').value);
+    T = Number(document.getElementById('T').value)+273;
 
     A = 1.16145;
     B = 0.14874;
@@ -20,8 +20,8 @@ function calculos(){
     for(i in molec){
         viscVal[i] = 0;
         if(lenjon[i][0] == 1){
-            sig = parseFloat(document.getElementsByClassName('sig_visc')[w1].value);
-            eps = parseFloat(document.getElementsByClassName('eps_visc')[w1].value);
+            sig = Number(document.getElementsByClassName('sig_visc')[w1].value);
+            eps = Number(document.getElementsByClassName('eps_visc')[w1].value);
 
             T_ad = T/eps;
             omega = A*T_ad**(-B) + C*Math.exp(-D*T_ad) + E*Math.exp(-F*T_ad);
@@ -30,9 +30,9 @@ function calculos(){
             w1++;
 
         }else{
-            Tc = parseFloat(document.getElementsByClassName('tc_visc')[w].value);
-            Pc = parseFloat(document.getElementsByClassName('pc_visc')[w].value);
-            Zc = parseFloat(document.getElementsByClassName('zc_visc')[w].value);
+            Tc = Number(document.getElementsByClassName('tc_visc')[w].value);
+            Pc = Number(document.getElementsByClassName('pc_visc')[w].value);
+            Zc = Number(document.getElementsByClassName('zc_visc')[w].value);
 
             et = (Tc**(1/6))/((mm[i]**0.5)*Pc**(2/3));
             viscVal[i] = ((1.9*T/Tc - 0.29)*1e-7)*(Zc**(-2/3))/et;
@@ -41,11 +41,11 @@ function calculos(){
         }
 
         cpVal[i] = 0;
-        a0 = parseFloat(document.getElementsByClassName('a0_calor')[i].value);
-        a1 = parseFloat(document.getElementsByClassName('a1_calor')[i].value);
-        a2 = parseFloat(document.getElementsByClassName('a2_calor')[i].value);
-        a3 = parseFloat(document.getElementsByClassName('a3_calor')[i].value);
-        a4 = parseFloat(document.getElementsByClassName('a4_calor')[i].value);
+        a0 = Number(document.getElementsByClassName('a0_calor')[i].value);
+        a1 = Number(document.getElementsByClassName('a1_calor')[i].value);
+        a2 = Number(document.getElementsByClassName('a2_calor')[i].value);
+        a3 = Number(document.getElementsByClassName('a3_calor')[i].value);
+        a4 = Number(document.getElementsByClassName('a4_calor')[i].value);
 
         cpVal[i] = 8.314*(a0 + a1*T + a2*T**2 + a3*T**3 + a4*T**4);
 
