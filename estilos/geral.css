@@ -231,7 +231,7 @@ h2 {
 }
 
 .resultados {
-    height: 100%;
+    height: 158px;
     width: 30%;
     margin: 20px 0 0 2.5%;
     padding: 5px;
@@ -245,10 +245,17 @@ h2 {
 .resultados div{
     width: 100%;
     height: 110px;
+    padding-bottom: 5px;
     margin: 0;
     border-radius: 0;
     overflow: auto;
     border: solid 2px white;
+    cursor: auto;
+}
+
+#secundario{
+    width: 100%;
+    float: left;
 }
 
 #gambiarra {

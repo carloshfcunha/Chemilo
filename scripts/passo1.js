@@ -89,13 +89,6 @@ function conferirReacao() {
         }
         document.getElementById("fluxos").innerHTML = fl;
 
-        
-            document.getElementsByClassName("F")[0].value = 10;
-            document.getElementsByClassName("F")[1].value = 0;
-            document.getElementsByClassName("F")[2].value = 0;
-
-
-
     }else{
         alert("Equação da reação incorreta!")
     }

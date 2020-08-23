@@ -277,7 +277,7 @@ function calcular() {
     dhTexto = "<p>-&Delta;H<sub>reação(25ºC)</sub> = ";
     dhTexto = dhTexto.concat(dH0.toPrecision(5));
     dhTexto = dhTexto.concat(" J/mol</p><p>-&Delta;H<sub>reação(");
-    dhTexto = dhTexto.concat(parseInt(T));
+    dhTexto = dhTexto.concat(parseInt(T-273));
     dhTexto = dhTexto.concat("ºC)</sub> = ");
     dhTexto = dhTexto.concat(dH.toPrecision(5));
     dhTexto = dhTexto.concat(" J/mol</p>");
