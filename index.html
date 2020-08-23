@@ -23,9 +23,10 @@
     <script src="scripts/LennardJones.js"></script>
     <script src="scripts/calcs.js"></script>
     <script src="scripts/inicia.js"></script>
+    <script src="scripts/verificar.js"></script>
     
 </head>
-<body onload="inicializa()">
+<body>
     <header>
         <img src="imagens/logo.png" alt="Logo_1">
         <h1>Cálculos de Fenômenos de Transporte em Catálise Heterogênea</h1>
@@ -71,7 +72,7 @@
                             <input type="text" id="rA">
                         </div>
                         <div class="cinetico" id="fluxos"></div>
-                        <div class="fechar" onclick="calculos()"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
+                        <div class="fechar" onclick="verif1()"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
                     </div>                    
                 </div>
                 <div id="passo2" class="passos">
@@ -117,7 +118,7 @@
                             <p>Porosidade do leito catalítico [%]</p>
                             <input type="text" id="e">
                         </div>
-                        <div class="fechar" onclick="calculos()"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
+                        <div class="fechar" onclick="verif2()"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
                     </div>                 
                 </div>
                 <div id="passo3" class="passos">
@@ -137,7 +138,7 @@
                         <div id="dados_viscosidades">
                             <p>Informe a equação da reação primeiro!</p>
                         </div>
-                        <div id="fechar_visc" class="fechar" onclick="calculos()"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
+                        <div id="fechar_visc" class="fechar" onclick="verif3()"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
                     </div>                  
                 </div>
             </div>
@@ -160,7 +161,7 @@
                         <div id="dados_difusoes">
                             <p>Informe a equação da reação primeiro!</p>
                         </div>
-                        <div class="fechar"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
+                        <div class="fechar" onclick="verif4()"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
                     </div>               
                 </div>
                 <div id="passo5" class="passos">
@@ -180,7 +181,7 @@
                         <div id="dados_calores">
                             <p>Informe a equação da reação primeiro!</p>
                         </div>
-                        <div id="fechar_calor" class="fechar" onclick="calculos()"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
+                        <div id="fechar_calor" class="fechar" onclick="verif5()"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
                     </div>              
                 </div>
                 <div id="passo6" class="passos">
@@ -200,7 +201,7 @@
                         <div id="dados_conducoes">
                             <p>Informe a equação da reação primeiro!</p>
                         </div>
-                        <div id="fechar_conducoes" class="fechar"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
+                        <div id="fechar_conducoes" class="fechar" onclick="verif6()"><i class="fa fa-check" aria-hidden="true"></i> Fechar</div>
                     </div>  
                 </div>
             </div>
@@ -263,7 +264,8 @@
 
     </main>
     <footer>
-        <p>Todos os direitos não reservados, ou seja, pode usar sem medo de direito autoral.</p>
+        <p id="exemplo" onclick="inicializa()">Exemplo</p>
+        <p>Todos os direitos não reservados, ou seja, pode usar sem medo de direito autoral.</p><br>
     </footer>
 </body>
 

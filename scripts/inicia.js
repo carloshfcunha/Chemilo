@@ -13,5 +13,10 @@ function inicializa() {
     document.getElementById("am").value = 1.26;
     document.getElementById("xA").value = 0.362;
     document.getElementById("rA").value = 0.193;
-    calculos();
+    verif1();
+    verif2();
+    verif3();
+    verif4();
+    verif5();
+    verif6();
 }

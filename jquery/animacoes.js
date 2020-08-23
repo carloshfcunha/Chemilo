@@ -1,5 +1,12 @@
 $(document).ready(function(){
 
+    localStorage.setItem("erroV1", JSON.stringify(0));
+    localStorage.setItem("erroV2", JSON.stringify(0));
+    localStorage.setItem("erroV3", JSON.stringify(0));
+    localStorage.setItem("erroV4", JSON.stringify(0));
+    localStorage.setItem("erroV5", JSON.stringify(0));
+    localStorage.setItem("erroV6", JSON.stringify(0));
+
     $('.dados').fadeOut(0);
     $('.quadros_duvidas').fadeOut(0);
     $('.textos_duvidas').fadeOut(0);

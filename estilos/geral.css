@@ -264,6 +264,18 @@ h2 {
     float: left;
 }
 
+#exemplo {
+    width: 25%;
+    margin-left: 37.5%;
+    font-weight: 700;
+    background-color: white;
+    color: rgb(0, 24, 46);
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
 @media(max-width: 700px){
     h1 {
         font-size: 120%;

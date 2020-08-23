@@ -1,7 +1,20 @@
 
 function calcular() {
 
-    molec = JSON.parse(localStorage.getItem("moleculas") || '[]');
+    erroV1 = JSON.parse(localStorage.getItem("erroV1") || '[]');
+    erroV2 = JSON.parse(localStorage.getItem("erroV2") || '[]');
+    erroV3 = JSON.parse(localStorage.getItem("erroV3") || '[]');
+    erroV4 = JSON.parse(localStorage.getItem("erroV4") || '[]');
+    erroV5 = JSON.parse(localStorage.getItem("erroV5") || '[]');
+    erroV6 = JSON.parse(localStorage.getItem("erroV6") || '[]');
+
+    erroV = erroV1*erroV2*erroV3*erroV4*erroV5*erroV6;
+
+    if(erroV == 0){
+        alert("Preencha todos os passos corretamente primero!")
+    }
+    else{
+        molec = JSON.parse(localStorage.getItem("moleculas") || '[]');
     atomos = JSON.parse(localStorage.getItem("atomos") || '[]');
     nAtomos = JSON.parse(localStorage.getItem("nAtomos") || '[]');
     coef = JSON.parse(localStorage.getItem("coeficientes") || '[]');
@@ -286,4 +299,5 @@ function calcular() {
 
 
     $('.saidas').slideDown(300);
+    }
 }
