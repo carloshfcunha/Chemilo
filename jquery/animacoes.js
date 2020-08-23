@@ -83,9 +83,11 @@ $(document).ready(function(){
             $('#secundario').slideDown(300);
             ww = 1;
             document.getElementById("mostrar").innerHTML = "Ocultar Informações";
+            $('#gambiarra').css({height: "25px"});
         }else{
             $('#secundario').slideUp(300);
             document.getElementById("mostrar").innerHTML = "Mostrar Informações";
+            $('#gambiarra').css({height: "0px"});
             ww = 0;
         }
         

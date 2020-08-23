@@ -13,12 +13,12 @@ function calcular() {
     seA = JSON.parse(localStorage.getItem("seA") || '[]');
     
     F = Array(molec);
-    Fa0 = document.getElementsByClassName("F")[0].value;
+    Fa0 = Number(document.getElementsByClassName("F")[0].value);
     nA = 0;
     dn = 0;
     Ft = 0;
     for(i in molec){
-        F[i] = parseFloat(document.getElementsByClassName("F")[i].value);
+        F[i] = Number(parseFloat(document.getElementsByClassName("F")[i].value));
         if(F[i]/coef[i] < Fa0 && F[i] > 0){
             Fa0 = F[i];
             nA = i;
@@ -30,7 +30,7 @@ function calcular() {
     ya0 = Fa0/Ft;
     ea = ya0*dn/coef[nA];
 
-    xA = parseFloat(document.getElementById("xA").value);
+    xA = Number(parseFloat(document.getElementById("xA").value));
 
     yi = Array(molec);
     viscm = 0;
@@ -44,7 +44,7 @@ function calcular() {
     w = 0;
     for(i in molec){
         if(MOrA[i] == 1){
-            voluMol[i] = document.getElementsByClassName("volM_dif")[w].value;
+            voluMol[i] = Number(document.getElementsByClassName("volM_dif")[w].value);
             w++;
         }
         else{
@@ -52,7 +52,7 @@ function calcular() {
             w1 = 0;
             for(j in atomos){
                 if(seA[j] == 1){
-                    vma = parseFloat(vma + nAtomos[i][j]*parseFloat(document.getElementsByClassName("volA_dif")[w1].value));
+                    vma = vma + nAtomos[i][j]*Number(document.getElementsByClassName("volA_dif")[w1].value);
                     w1++;  
                 }
                         
@@ -61,7 +61,7 @@ function calcular() {
         }     
     }
 
-    T = document.getElementById("T").value;
+    T = Number(document.getElementById("T").value);
 
     Dai = Array(molec);
     somaSup = 0;
@@ -85,7 +85,7 @@ function calcular() {
 
     Sc = viscm/(den*Dim);
 
-    diam = document.getElementById("Dr").value/1000;
+    diam = Number(document.getElementById("Dr").value)/1000;
 
     somaFM = 0;
     for(i in molec){
@@ -96,7 +96,7 @@ function calcular() {
 
     G = somaFM/((3.1415*diam**2)*3600000/4);
 
-    dp = document.getElementById("dp").value/1000;
+    dp = Number(document.getElementById("dp").value)/1000;
 
     Re = dp*G/viscm;
 
@@ -106,9 +106,9 @@ function calcular() {
         jd = 1.66*Re**(-0.51)
     }
 
-    P = parseFloat(document.getElementById("P").value);
-    rA = parseFloat(document.getElementById("rA").value);
-    am = parseFloat(document.getElementById("am").value);
+    P = Number(document.getElementById("P").value);
+    rA = Number(document.getElementById("rA").value);
+    am = Number(document.getElementById("am").value);
 
     delta = 0;
     for(i in molec){
@@ -134,7 +134,7 @@ function calcular() {
 
     condVal = Array(molec);
     for(i in molec){
-        condVal[i] = document.getElementsByClassName("lamb_conducao")[i].value;
+        condVal[i] = Number(document.getElementsByClassName("lamb_conducao")[i].value);
     }
 
     condm = 0;
@@ -149,11 +149,11 @@ function calcular() {
 
     Pr = cpm*viscm/(mmM*condm);
     
-    ff = document.getElementById("ff").value;
+    ff = Number(document.getElementById("ff").value);
 
     VdivA = ff*dp/6;
 
-    poro = document.getElementById("e").value/100;
+    poro = Number(document.getElementById("e").value)/100;
 
     Rel = G*poro*VdivA/(viscm*ff);
 
@@ -176,12 +176,12 @@ function calcular() {
     A4Val = Array(molec);
     dhVal = Array(molec);
     for(i in molec){
-        A0Val[i] = document.getElementsByClassName("a0_calor")[i].value;
-        A1Val[i] = document.getElementsByClassName("a1_calor")[i].value;
-        A2Val[i] = document.getElementsByClassName("a2_calor")[i].value;
-        A3Val[i] = document.getElementsByClassName("a3_calor")[i].value;
-        A4Val[i] = document.getElementsByClassName("a4_calor")[i].value;
-        dhVal[i] = document.getElementsByClassName("dh_calor")[i].value*1000;
+        A0Val[i] = Number(document.getElementsByClassName("a0_calor")[i].value);
+        A1Val[i] = Number(document.getElementsByClassName("a1_calor")[i].value);
+        A2Val[i] = Number(document.getElementsByClassName("a2_calor")[i].value);
+        A3Val[i] = Number(document.getElementsByClassName("a3_calor")[i].value);
+        A4Val[i] = Number(document.getElementsByClassName("a4_calor")[i].value);
+        dhVal[i] = Number(document.getElementsByClassName("dh_calor")[i].value)*1000;
         dA0 = dA0 -coef[i]*A0Val[i];
         dA1 = dA1 -coef[i]*A1Val[i];
         dA2 = dA2 -coef[i]*A2Val[i];
@@ -200,31 +200,89 @@ function calcular() {
     
     tmTexto = "<p>k<sub>m</sub> = ";
     tmTexto = tmTexto.concat(km.toPrecision(5));
-    tmTexto = tmTexto.concat(" mol/(m<sup>2</sup>.s.atm)</p><p>&Delta;P = ");
+    tmTexto = tmTexto.concat(" mol/m<sup>2</sup>.s.atm</p><p>&Delta;P = ");
     tmTexto = tmTexto.concat(dP.toPrecision(5));
     tmTexto = tmTexto.concat(" atm</p>");
     document.getElementById("tm").innerHTML = tmTexto
 
     tcTexto = "<p>h<sub>f</sub> = ";
     tcTexto = tcTexto.concat(hf.toPrecision(5));
-    tcTexto = tcTexto.concat(" J/(m<sup>2</sup>.s.K)</p><p>&Delta;T = ");
+    tcTexto = tcTexto.concat(" J/m<sup>2</sup>.s.K</p><p>&Delta;T = ");
     tcTexto = tcTexto.concat(dT.toPrecision(5));
     tcTexto = tcTexto.concat(" ºC</p>");
     document.getElementById("tc").innerHTML = tcTexto
 
     viscTexto = "<p>&mu;<sub>m</sub> = ";
-    viscTexto = viscTexto.concat(viscm.toPrecision(5));
+    viscTexto = viscTexto.concat((1000*viscm).toPrecision(5));
     viscTexto = viscTexto.concat(" cp</p>");
     for(i in molec){
         viscTexto = viscTexto.concat("<p>&mu;<sub>");
         viscTexto = viscTexto.concat(molec[i]);
         viscTexto = viscTexto.concat("</sub> = ");
-        viscTexto = viscTexto.concat(viscVal[i].toPrecision(5));
+        viscTexto = viscTexto.concat((1000*viscVal[i]).toPrecision(5));
         viscTexto = viscTexto.concat(" cp</p>");
-        alert(viscVal[i]);
     }
     document.getElementById("visc_resultado").innerHTML = viscTexto
 
+    difTexto = "<p>D<sub>";
+    difTexto = difTexto.concat(molec[nA]);
+    difTexto = difTexto.concat("-m</sub> = ");
+    difTexto = difTexto.concat((Dim*10000).toPrecision(5));
+    difTexto = difTexto.concat(" cm<sup>2</sup>/s</p>");
+    for(i in molec){
+        if(i != nA){
+            difTexto = difTexto.concat("<p>D<sub>");
+            difTexto = difTexto.concat(molec[nA]);
+            difTexto = difTexto.concat("-");
+            difTexto = difTexto.concat(molec[i]);
+            difTexto = difTexto.concat("</sub> = ");
+            difTexto = difTexto.concat(Dai[i].toPrecision(5));
+            difTexto = difTexto.concat(" cm<sup>2</sup>/s</p>");
+        }
+    }
+    document.getElementById("dif_resultado").innerHTML = difTexto
+
+    cpTexto = "<p>Cp<sub>m</sub> = ";
+    cpTexto = cpTexto.concat(cpm.toPrecision(5));
+    cpTexto = cpTexto.concat(" J/mol.K</p>");
+    for(i in molec){
+        cpTexto = cpTexto.concat("<p>Cp<sub>");
+        cpTexto = cpTexto.concat(molec[i]);
+        cpTexto = cpTexto.concat("</sub> = ");
+        cpTexto = cpTexto.concat(cpVal[i].toPrecision(5));
+        cpTexto = cpTexto.concat(" J/mol.K</p>");
+    }
+    document.getElementById("cp_resultado").innerHTML = cpTexto
+
+    condTexto = "<p>&lambda;<sub>m</sub> = ";
+    condTexto = condTexto.concat((1000*condm).toPrecision(5));
+    condTexto = condTexto.concat(" J/m.s.K</p>");
+    for(i in molec){
+        condTexto = condTexto.concat("<p>&lambda;<sub>");
+        condTexto = condTexto.concat(molec[i]);
+        condTexto = condTexto.concat("</sub> = ");
+        condTexto = condTexto.concat((1000*condVal[i]).toPrecision(5));
+        condTexto = condTexto.concat(" J/m.s.K</p>");
+    }
+    document.getElementById("cond_resultado").innerHTML = condTexto
+
+    mmTexto = "<p>MM<sub>m</sub> = ";
+    mmTexto = mmTexto.concat(mmM.toPrecision(5));
+    mmTexto = mmTexto.concat(" g/mol</p><p>&rho;<sub>m</sub> = ");
+    mmTexto = mmTexto.concat(den.toPrecision(5));
+    mmTexto = mmTexto.concat(" kg/m<sup>3</sup></p>");
+    
+    document.getElementById("mm_resultado").innerHTML = mmTexto
+
+    dhTexto = "<p>-&Delta;H<sub>reação(25ºC)</sub> = ";
+    dhTexto = dhTexto.concat(dH0.toPrecision(5));
+    dhTexto = dhTexto.concat(" J/mol</p><p>-&Delta;H<sub>reação(");
+    dhTexto = dhTexto.concat(parseInt(T));
+    dhTexto = dhTexto.concat("ºC)</sub> = ");
+    dhTexto = dhTexto.concat(dH.toPrecision(5));
+    dhTexto = dhTexto.concat(" J/mol</p>");
+    
+    document.getElementById("dh_resultado").innerHTML = dhTexto
 
 
     $('.saidas').slideDown(300);
