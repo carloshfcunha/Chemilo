@@ -56,6 +56,14 @@ main {
     border-radius: 20px;
 }
 
+a {
+    border-radius: 5px;
+    padding: 1px 5px;
+    background-color: rgb(5, 69, 126);
+    color: white;
+    text-decoration: none;
+}
+
 .grupo {
     width: 100%;
     max-width: 682px;
@@ -95,14 +103,21 @@ h2 {
     float: right;
 }
 
+.textos_duvidas {
+    text-align: justify;
+    LINE-HEIGHT:30px;
+}
+
 
 .quadros_duvidas {
     width: 100%;
+    height: 760px;
     left: 0;
+    top: 0;
     padding: 167px 0 167px 0;
     z-index: 100;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .quadros_duvidas div, .resultados div {
