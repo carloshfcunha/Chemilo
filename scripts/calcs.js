@@ -4,10 +4,6 @@ function calculos(){
     erroVv6 = JSON.parse(localStorage.getItem("erroVv6") || '[]');
     erroVv5 = JSON.parse(localStorage.getItem("erroVv5") || '[]');
 
-    console.log(erroVv3);
-    console.log(erroVv5);
-    console.log(erroVv6);
-
     if(erroVv3*erroVv6*erroVv5 == 1){
         molec = JSON.parse(localStorage.getItem("moleculas") || '[]');
         mm = JSON.parse(localStorage.getItem("mMolar") || '[]');
@@ -59,8 +55,8 @@ function calculos(){
             cpVal[i] = 8.314*(a0 + a1*T + a2*T**2 + a3*T**3 + a4*T**4);
     
             condVal[i] = (viscVal[i]/mm[i])*(1.32*cpVal[i] + 3.74)
-    
-            if(isNaN(condVal[i])){
+            
+            if(isNaN(condVal[i]) || document.getElementById('T').value == ""){
                 document.getElementsByClassName("lamb_conducao")[i].value = "";
             }else{
                 document.getElementsByClassName("lamb_conducao")[i].value = condVal[i];

@@ -88,13 +88,13 @@ function verif2() {
 
     if(erroV2 == 1){
         $("#passo2").css({"background-image": "linear-gradient(to bottom right, rgb(0, 24, 46) , rgb(14, 101, 177))"});
-        calculos();
     }else{
         $("#passo2").css({"background-image": "linear-gradient(to bottom right, rgb(177, 0, 0) , rgb(5, 69, 126))"});
         if(erroVm2 == 0){
             alert("Preenchimento incorreto! Verifique se não utilizou letras nas entradas de dados numéricos.");
         }
     }
+    calculos();
 
 }
 function verif3() {
