@@ -84,7 +84,7 @@ $(document).ready(function(){
     });
 
     $('.fechar').click( function(){
-        $('.passos').fadeIn(500);
+        $('.passos').fadeIn(400);
         if( $(window).width() <= 456){
             $('.passos').css({width: "46%", height: "200px", margin: "2%", padding: "10px", cursor: "pointer"});
         }
