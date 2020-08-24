@@ -50,6 +50,7 @@ footer {
 main {
     background-color: white;
     width: 100%;
+    min-height: 570px;
     padding: 10px;
     float: left;
     border-radius: 20px;
@@ -59,6 +60,10 @@ main {
     width: 100%;
     max-width: 682px;
     margin: auto;
+}
+
+.passos {
+    overflow: hidden;
 }
 
 .passos, .resultados {
