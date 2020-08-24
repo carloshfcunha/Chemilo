@@ -57,6 +57,10 @@ footer {
     color: white;
 }
 
+footer p{
+    font-size: 0.8em;
+}
+
 main {
     background-color: white;
     width: 100%;
@@ -349,6 +353,10 @@ h2 {
     .quadros_duvidas div{
         width: 100%;
         margin: 0;
+    }
+
+    footer p{
+        font-size: 0.6em;
     }
 
 }
