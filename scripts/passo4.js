@@ -195,23 +195,5 @@ function difusoes() {
     localStorage.setItem("MOrA", JSON.stringify(MOrA));
     localStorage.setItem("seA", JSON.stringify(seA));
 
-    x4 = document.getElementById("passo4").getElementsByTagName("input");
-    cx4 = x4.length;
-
-    t4 = 1;
-
-    for(i = 0; i < cx4; i++){
-        if(isNaN(x4[i].value) || x4[i].value == ""){
-            t4 = 0;
-        }
-    }
-
-    if(t4 == 1){
-        $("#passo4").css({"background-image": "linear-gradient(to bottom right, rgb(0, 24, 46) , rgb(14, 101, 177))"});
-    }else{
-        $("#passo4").css({"background-image": "linear-gradient(to bottom right, rgb(177, 0, 0) , rgb(5, 69, 126))"});
-    }
-
-    localStorage.setItem("t4", JSON.stringify(t4));
-
+    verif4();
 }

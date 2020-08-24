@@ -42,23 +42,6 @@ function viscosidades() {
         document.getElementsByClassName("mm_visc")[i].value = mm[i];
     }
 
-    x3 = document.getElementById("passo3").getElementsByTagName("input");
-    cx3 = x3.length;
-
-    t3 = 1;
-
-    for(i = 0; i < cx3; i++){
-        if(isNaN(x3[i].value) || x3[i].value == ""){
-            t3 = 0;
-        }
-    }
-
-    if(t3 == 1){
-        $("#passo3").css({"background-image": "linear-gradient(to bottom right, rgb(0, 24, 46) , rgb(14, 101, 177))"});
-    }else{
-        $("#passo3").css({"background-image": "linear-gradient(to bottom right, rgb(177, 0, 0) , rgb(5, 69, 126))"});
-    }
-
-    localStorage.setItem("t3", JSON.stringify(t3));
+    verif3();
     
 }

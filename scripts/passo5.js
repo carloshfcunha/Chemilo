@@ -55,23 +55,5 @@ function calores() {
         }
     }
 
-    x5 = document.getElementById("passo5").getElementsByTagName("input");
-    cx5 = x5.length;
-
-    t5 = 1;
-
-    for(i = 0; i < cx5; i++){
-        if(isNaN(x5[i].value) || x5[i].value == ""){
-            t5 = 0;
-        }
-    }
-
-    if(t5 == 1){
-        $("#passo5").css({"background-image": "linear-gradient(to bottom right, rgb(0, 24, 46) , rgb(14, 101, 177))"});
-    }else{
-        $("#passo5").css({"background-image": "linear-gradient(to bottom right, rgb(177, 0, 0) , rgb(5, 69, 126))"});
-    }
-
-    localStorage.setItem("t5", JSON.stringify(t5));
-
+    verif5();
 }

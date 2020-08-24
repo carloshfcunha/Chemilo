@@ -6,6 +6,18 @@ $(document).ready(function(){
     localStorage.setItem("erroV4", JSON.stringify(0));
     localStorage.setItem("erroV5", JSON.stringify(0));
     localStorage.setItem("erroV6", JSON.stringify(0));
+    localStorage.setItem("erroVm1", JSON.stringify(0));
+    localStorage.setItem("erroVm2", JSON.stringify(0));
+    localStorage.setItem("erroVm3", JSON.stringify(0));
+    localStorage.setItem("erroVm4", JSON.stringify(0));
+    localStorage.setItem("erroVm5", JSON.stringify(0));
+    localStorage.setItem("erroVm6", JSON.stringify(0));
+    localStorage.setItem("erroVv1", JSON.stringify(0));
+    localStorage.setItem("erroVv2", JSON.stringify(0));
+    localStorage.setItem("erroVv3", JSON.stringify(0));
+    localStorage.setItem("erroVv4", JSON.stringify(0));
+    localStorage.setItem("erroVv5", JSON.stringify(0));
+    localStorage.setItem("erroVv6", JSON.stringify(0));
 
     $('.dados').fadeOut(0);
     $('.quadros_duvidas').fadeOut(0);

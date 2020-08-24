@@ -98,10 +98,9 @@ function conferirReacao() {
 
     constLJ();
     massaMolar();
+    conduc();
     viscosidades();
     difusoes();
     calores();
-    conduc();
-
 }
 
