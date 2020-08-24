@@ -14,6 +14,16 @@ ul, ol, li {
     list-style: none;
 }
 
+#tampa{
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    z-index: 200;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(3, 48, 87);
+}
+
 body {
     background-color: rgb(3, 48, 87);
     background-image: linear-gradient(to right, rgb(0, 24, 46) , rgb(5, 69, 126));
@@ -328,6 +338,17 @@ h2 {
     #principal .resultados {
         width: 90%;
         margin: 20px 0 0 5%;
+    }
+
+    .quadros_duvidas{
+        height: 1010px;
+        padding: 10px;
+        padding-top: 140px;
+    }
+
+    .quadros_duvidas div{
+        width: 100%;
+        margin: 0;
     }
 
 }

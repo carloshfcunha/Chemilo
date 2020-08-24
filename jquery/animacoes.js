@@ -24,6 +24,7 @@ $(document).ready(function(){
     $('.textos_duvidas').fadeOut(0);
     $('.saidas').fadeOut(0);
     $('#secundario').fadeOut(0);
+    $('#tampa').fadeOut(0);
     ii = 1;
     jj = 1;
     kk = 1;
