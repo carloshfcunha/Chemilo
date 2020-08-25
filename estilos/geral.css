@@ -313,7 +313,7 @@ h2 {
 
 @media(max-width: 800px){
     h1 {
-        font-size: 120%;
+        font-size: 140%;
         margin-right: 0%;
     }
 
@@ -364,10 +364,10 @@ h2 {
 
 }
 
-@media(max-width: 456px){
+@media(max-width: 500px){
     h1 {
         margin-top: 3px;
-        font-size: 100%;
+        font-size: 110%;
     }
 
     .grupo {
