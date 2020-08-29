@@ -25,6 +25,7 @@ function calcular() {
         moa = JSON.parse(localStorage.getItem("moa") || '[]');
         MOrA = JSON.parse(localStorage.getItem("MOrA") || '[]');
         seA = JSON.parse(localStorage.getItem("seA") || '[]');
+        ehConv = JSON.parse(localStorage.getItem("ehConv") || '[]');
         
         F = Array(molec);
         Fa0 = Number(document.getElementsByClassName("F")[0].value);
@@ -44,15 +45,20 @@ function calcular() {
         ya0 = Fa0/Ft;
         ea = ya0*dn/coef[nA];
 
-        xA = Number(document.getElementById("xA").value);
+        xA = Number(document.getElementById("xA").value)/100;
 
         yi = Array(molec);
         viscm = 0;
         for(i in molec){
-            yi[i] = ((F[i]/Fa0)-(coef[i]/coef[nA])*xA)/(1+ea*xA);
+            if(ehConv == 1){
+                yi[i] = ((F[i]/Fa0)-(coef[i]/coef[nA])*xA)/(1+ea*xA);
+            }else{
+                yi[i] = Number(document.getElementsByClassName("yFrac")[i].value)/100;
+            }
             viscm = viscm + yi[i]*viscVal[i];
         }
 
+        console.log(yi);
 
         voluMol = Array(molec);
         w = 0;

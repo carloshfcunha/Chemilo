@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="estilos/passo1.css">
     <link rel="stylesheet" href="estilos/passo3.css">
     <link rel="stylesheet" href="estilos/passo4.css">
+    <link rel="stylesheet" href="estilos/slider.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"></script>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -36,10 +37,13 @@
         <section class="quadros_duvidas">
             <div>
                 <p class="textos_duvidas" id="texto_duvida1">
-                    - Insira a equação balanceada da reação para que possam ser identificados os componentes. Nesse site existem alguns dados pré-definidos, portanto, escreva as fórmulas assim como elas estão apresentadas nas tabelas desse site, que podem ser encontradas nos tópicos de duvidas de cada passo.
+                    - Insira a equação balanceada da reação para que possam ser identificados os componentes. Nesse site existem alguns dados pré-definidos, portanto, escreva as fórmulas assim como elas estão apresentadas nas tabelas desse site, que podem ser encontradas nos tópicos de duvidas de cada passo. (Obs: Em caso de reações paralelas ou em série, utilize a equação global da reação.)
                     <br>
                     <br>
-                    - A seguir, informe os valores da conversão, da taxa de reação e das vazões molares. 
+                    - A seguir, escolha se você deseja informar o valor da convesão ou os valores das frações molares (essa opção é mais indicada para quando se tem reações paralelas ou em série).
+                    <br>
+                    <br>
+                    - Informe os valores da conversão ou frações, da taxa de reação e das vazões molares. 
                 </p>
 
                 <p class="textos_duvidas" id="texto_duvida2">
@@ -88,9 +92,21 @@
                         <h3>Insira a reação química balanceada.</h3>
                         <input type="text" id="reacao" onblur="conferirReacao()" value="" placeholder="Ex: CO2 + 3H2 = CH3OH + H2O">
                         <h3>Informe os dados cinéticos.</h3>
-                        <div class="cinetico">
-                            <p>x<sub>A</sub></p>
+                        <div id="cx_seletor">
+                            <div  id="seletor" class="cinetico">
+                                <p>Conversão</p>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                                <p>Frações</p>
+                            </div>
+                        </div>
+                        <div id="conversao" class="cinetico">
+                            <p>x<sub>A</sub> [%]</p>
                             <input type="text" id="xA">
+                        </div>
+                        <div id="fracao" class="cinetico">
                         </div>
                         <div class="cinetico">
                             <p>r<sub>A</sub> [mol/(h.g<sub>cat</sub>)]</p>

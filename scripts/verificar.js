@@ -8,9 +8,9 @@ function verif(passo) {
 
     a = 0;
     if(passo == "passo1"){
-        a = 1;
-        erroVerif[0] = erroVerif.concat(1);
-        erroVerifm[0] = erroVerifm.concat(1);
+        a = 2;
+        erroVerif = erroVerif.concat([1,1]);
+        erroVerifm = erroVerifm.concat([1,1]);
     }
 
     erroV = 1;

@@ -24,11 +24,15 @@ $(document).ready(function(){
     $('.textos_duvidas').fadeOut(0);
     $('.saidas').fadeOut(0);
     $('#secundario').fadeOut(0);
+    $('#fracao').fadeOut(0);
     $('#tampa').fadeOut(0);
     ii = 1;
     jj = 1;
     kk = 1;
     ww = 0;
+    ll = 0;
+    ehConv = 1;
+    localStorage.setItem("ehConv", JSON.stringify(ehConv));
 
     $('.passos').click( function(){
         if (ii + jj + kk == 3) {
@@ -112,8 +116,35 @@ $(document).ready(function(){
             $('#gambiarra').css({height: "0px"});
             ww = 0;
         }
-        
-        
+    });
+
+    $('.slider').click( function(){
+        if(ll == 0){
+            $('#fracao').fadeIn(500);
+            $('#conversao').fadeOut(500);
+            ll = 1;
+            document.getElementById("xA").value = 0;
+            entradas = document.getElementById("fracao").getElementsByTagName("input");
+            nEntradas = entradas.length;
+            for(i = 0; i < nEntradas; i++){
+                entradas[i].value = "";
+            }
+            ehConv = 0;
+            
+        }else{
+            $('#fracao').fadeOut(500);
+            $('#conversao').fadeIn(500);
+            ll = 0;
+            document.getElementById("xA").value = "";
+            entradas = document.getElementById("fracao").getElementsByTagName("input");
+            nEntradas = entradas.length;
+            for(i = 0; i < nEntradas; i++){
+                entradas[i].value = 0;
+            }
+            ehConv = 1;
+        }
+
+        localStorage.setItem("ehConv", JSON.stringify(ehConv));
 
     });
 

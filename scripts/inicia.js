@@ -11,7 +11,7 @@ function inicializa() {
     document.getElementById("ff").value = 0.778;
     document.getElementById("e").value = 37;
     document.getElementById("am").value = 1.26;
-    document.getElementById("xA").value = 0.362;
+    document.getElementById("xA").value = 36.2;
     document.getElementById("rA").value = 0.193;
     verif1();
     verif2();

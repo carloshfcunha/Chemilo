@@ -82,12 +82,22 @@ function conferirReacao() {
         }
 
         fl = "";
+        yl = "";
         for(i in moleculas){
             fl = fl.concat('<p>F<sub>');
             fl = fl.concat(moleculas[i]);
             fl = fl.concat('_0</sub> [mol/h]</p><input type="text" class="F">');
+
+            yl = yl.concat('<p>y<sub>');
+            yl = yl.concat(moleculas[i]);
+            yl = yl.concat('</sub> [%]</p><input type="text" class="yFrac">');
         }
         document.getElementById("fluxos").innerHTML = fl;
+        document.getElementById("fracao").innerHTML = yl;
+
+        for(i in moleculas){
+            document.getElementsByClassName("yFrac")[i].value = 0;
+        }
 
     }else{
         alert("Equação da reação incorreta!")
