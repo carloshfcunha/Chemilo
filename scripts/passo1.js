@@ -92,15 +92,15 @@ function conferirReacao() {
     }else{
         alert("Equação da reação incorreta!")
     }
-    
+
     localStorage.setItem("coeficientes", JSON.stringify(coeficientes));
     localStorage.setItem("moleculas", JSON.stringify(moleculas));
 
+    difusoes();
     constLJ();
     massaMolar();
     conduc();
     viscosidades();
-    difusoes();
     calores();
 }
 

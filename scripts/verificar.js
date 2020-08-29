@@ -66,6 +66,7 @@ function verif1() {
     }else{
         $("#passo1").css({"background-image": "linear-gradient(to bottom right, rgb(177, 0, 0) , rgb(5, 69, 126))"});
         if(erroVm1 == 0){
+            alert(passo);
             alert("Preenchimento incorreto! Verifique se não utilizou letras nas entradas de dados numéricos.")
         }
     }
@@ -91,6 +92,7 @@ function verif2() {
     }else{
         $("#passo2").css({"background-image": "linear-gradient(to bottom right, rgb(177, 0, 0) , rgb(5, 69, 126))"});
         if(erroVm2 == 0){
+            alert(passo);
             alert("Preenchimento incorreto! Verifique se não utilizou letras nas entradas de dados numéricos.");
         }
     }
@@ -117,6 +119,7 @@ function verif3() {
     }else{
         $("#passo3").css({"background-image": "linear-gradient(to bottom right, rgb(177, 0, 0) , rgb(5, 69, 126))"});
         if(erroVm3 == 0){
+            alert(passo);
             alert("Preenchimento incorreto! Verifique se não utilizou letras nas entradas de dados numéricos.");
         }
     }
@@ -141,6 +144,7 @@ function verif4() {
     }else{
         $("#passo4").css({"background-image": "linear-gradient(to bottom right, rgb(177, 0, 0) , rgb(5, 69, 126))"});
         if(erroVm4 == 0){
+            alert(passo);
             alert("Preenchimento incorreto! Verifique se não utilizou letras nas entradas de dados numéricos.");
         }
     }
@@ -166,6 +170,7 @@ function verif5() {
     }else{
         $("#passo5").css({"background-image": "linear-gradient(to bottom right, rgb(177, 0, 0) , rgb(5, 69, 126))"});
         if(erroVm5 == 0){
+            alert(passo);
             alert("Preenchimento incorreto! Verifique se não utilizou letras nas entradas de dados numéricos.");
         }
     }
@@ -190,6 +195,7 @@ function verif6() {
     }else{
         $("#passo6").css({"background-image": "linear-gradient(to bottom right, rgb(177, 0, 0) , rgb(5, 69, 126))"});
         if(erroVm6 == 0){
+            alert(passo);
             alert("Preenchimento incorreto! Verifique se não utilizou letras nas entradas de dados numéricos.");
         }
     }

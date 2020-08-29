@@ -117,13 +117,12 @@ function massaMolar() {
     ["Rg",272],
     ["Cn",285]];
     
-
-    mm = []
-    for(i in nAtomos){
-        mm = mm.concat(0);
+    mm = Array(molec);
+    for(i in molec){
+        mm[i] = 0;
     }
 
-    for(i in nAtomos){
+    for(i in molec){
         for(j in atomos){
             for(k in massas){
                 if(atomos[j] == massas[k][0]){
@@ -132,6 +131,8 @@ function massaMolar() {
             }
         }
     }
+
+    
 
     localStorage.setItem("mMolar", JSON.stringify(mm));
 
